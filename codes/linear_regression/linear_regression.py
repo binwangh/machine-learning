@@ -12,37 +12,42 @@ Project: https://github.com/aymericdamien/TensorFlow-Examples/
 from __future__ import print_function
 
 import tensorflow as tf
-import numpy
+import numpy as np
 import matplotlib.pyplot as plt
-rng = numpy.random
 
-# Parameters
+# ---1）定义超参数
 learning_rate = 0.01
 training_epochs = 1000
 display_step = 50
 
-# Training Data
-train_X = numpy.asarray([3.3,4.4,5.5,6.71,6.93,4.168,9.779,6.182,7.59,2.167,
-                         7.042,10.791,5.313,7.997,5.654,9.27,3.1])
-train_Y = numpy.asarray([1.7,2.76,2.09,3.19,1.694,1.573,3.366,2.596,2.53,1.221,
-                         2.827,3.465,1.65,2.904,2.42,2.94,1.3])
+# ---2)输入数据
+train_X = np.asarray([3.3, 4.4, 5.5, 6.71,
+                        6.93, 4.168, 9.779, 6.182,
+                        7.59, 2.167, 7.042, 10.791,
+                        5.313, 7.997, 5.654, 9.27,
+                        3.1])
+train_Y = np.asarray([1.7, 2.76, 2.09, 3.19,
+                        1.694, 1.573, 3.366, 2.596,
+                        2.53, 1.221, 2.827, 3.465,
+                        1.65, 2.904, 2.42, 2.94,
+                        1.3])
 
 #n_samples = train_X.shape[0]
 #print("Sample数目： ", n_samples)
 
-# tf Graph Input
+# ---3)构建模型 tf Graph Input
 X = tf.placeholder("float")
 Y = tf.placeholder("float")
-
 # Set model weights
-W = tf.Variable(rng.randn(), name="weight")
-b = tf.Variable(rng.randn(), name="bias")
-
+W = tf.Variable(np.random.randn(), name="weight")
+b = tf.Variable(np.random.randn(), name="bias")
 # Construct a linear model
 pred = tf.add(tf.multiply(X, W), b)
 
-# Mean squared error
+# ---4)定义损失函数 Mean squared error
 cost = tf.reduce_sum(tf.pow(pred-Y, 2))/(2*train_X.shape[0])
+# ---5)创建优化器
+# ---6)定义单步训练操作
 # Gradient descent
 #  Note, minimize() knows to modify W and b because Variable objects are trainable=True by default
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
@@ -50,15 +55,16 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 # Initialize the variables (i.e. assign their default value)
 init = tf.global_variables_initializer()
 
+# ---7)创建会话
 # Start training
 with tf.Session() as sess:
 
     # Run the initializer
     sess.run(init)
-
+    # ---8)迭代训练
     # Fit all training data
     for epoch in range(training_epochs):
-#        for (x, y) in zip(train_X, train_Y):                     # 感觉这个速度慢
+#        for (x, y) in zip(train_X, train_Y):                   # 感觉这个速度慢
 #            sess.run(optimizer, feed_dict={X: x, Y: y})
         sess.run(optimizer, feed_dict={X: train_X, Y:train_Y})  # 感觉这个速度快
 
@@ -79,8 +85,8 @@ with tf.Session() as sess:
     plt.show()
 
     # Testing example, as requested (Issue #2)
-    test_X = numpy.asarray([6.83, 4.668, 8.9, 7.91, 5.7, 8.7, 3.1, 2.1])
-    test_Y = numpy.asarray([1.84, 2.273, 3.2, 2.831, 2.92, 3.24, 1.35, 1.03])
+    test_X = np.asarray([6.83, 4.668, 8.9, 7.91, 5.7, 8.7, 3.1, 2.1])
+    test_Y = np.asarray([1.84, 2.273, 3.2, 2.831, 2.92, 3.24, 1.35, 1.03])
 
     print("Testing... (Mean square loss Comparison)")
     testing_cost = sess.run(
