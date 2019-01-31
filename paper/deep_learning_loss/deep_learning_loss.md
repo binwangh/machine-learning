@@ -1,0 +1,51 @@
+# Loss function
+- Contrastive loss
+    - [2006 CVPR] Dimensionality reduction by learning an invariant mapping
+    - [2005 CVPR] Learning a similarity metric discriminatively, with application to face verification
+
+- Triplet loss
+    - [2015 BMVC] Deep Face Recognition
+    - [2015 CVPR] FaceNet_ A Uniﬁed Embedding for Face Recognition and Clustering
+    - Angular Loss
+        - [2017 ICCV] Deep Metric Learning with Angular Loss
+    
+- Softmax Loss
+    - Reformulated Softmax?
+        - [2017 ACM MM] NormFace_ L2 Hypersphere Embedding for Face Verification
+    - L-Softmax
+        - [2016 ICML] Large-Margin Softmax Loss for Convolutional Neutral Networks
+    - A-Softmax
+        - [2017 CVPR] SphereFace_ Deep Hypersphere Embedding for Face Recognition
+    - L2-Softmax Loss
+        - [2017] L2-constrained Softmax Loss for Discriminative Face Verification
+        - [2018] Crystal Loss and Quality Pooling for Unconstrained Face Verification and Recognition
+    - COCO Loss
+        - [2017 NIPS] Rethinking Feature Discrimination and Polymerization for Large-scale Recognition
+    - AM-Softmax, ACM-Softmax
+        - [2018] Additive Margin Softmax for Face Verification
+        - [2018] CosFace_ Large Margin Cosine Loss for Deep Face Recognition
+    - AAM-Softmax
+        - [2018] ArcFace_ Additive Angular Margin Loss for Deep Face Recognition
+        
+- Center loss
+    - [2016 ECCV] A Discriminative Feature Learning Approach for Deep Face Recognition
+    - Contrastive-center loss
+        - [2017] Contrastive-center loss for deep neural networks
+
+- Range Loss
+    - [2017 CVPR] Range Loss for Deep Face Recognition with Long-tail
+
+- N-pair Loss
+    - [2016 NIPS] Improved Deep Metric Learning with Multi-class N-pair Loss Objective
+
+- Coupled Clusters Loss
+    - [2016 CVPR] Deep Relative Distance Learning_ Tell the Difference Between Similar Vehicles
+    
+- Lifted structured loss
+    - [2016 CVPR] Deep Metric Learning via Lifted Structured Feature Embedding
+    
+- Ring loss
+    - [2018 CVPR] Ring loss_ Convex Feature Normalization for Face Recognition
+
+- Git Loss
+    - [2018 BMVCW] Git Loss for Deep Face Recognition
