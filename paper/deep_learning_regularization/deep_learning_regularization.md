@@ -1,0 +1,59 @@
+# Regularization and Data Augmentation
+- Weight Decay, L2 Regularization
+    - [1991 NIPS] A simple weight decay can improve generalization
+- Dropout
+    - [2013 NIPS] Dropout Training as Adaptive Regularization
+    - [2014 JMLR] Dropout_ A Simple Way to Prevent Neural Networks from Overfitting
+- Batch Normalization
+    - [2015] Batch Normalization_ Accelerating Deep Network Training b y Reducing Internal Covariate Shift
+    - [2018] Batch Normalization and the impact of batch structure on the behavior of deep convolution networks
+- LSR, Label Smoothing Regularization
+    - [2016 CVPR] Rethinking the Inception Architecture for Computer Vision
+- DisturbLabel
+    - [2016] DisturbLabel_ Regularizing CNN on the Loss Layer
+- Layer Normalization
+    - [2016] Layer Normalization
+- Noise
+    - [2017 NIPS] Regularizing Deep Neural Networks by Noise_ Its Interpretation and Optimization
+- Feature Incay
+    - [2017] Feature Incay for Representation Regularization
+- Cutout
+    - [2017] Improved Regularization of Convolutional Neural Networks with Cutout
+- mixup and mixup-like
+    - [2017] mixup_ Beyond Empirical Risk Minimization
+    - [2018] Improved Mixed-Example Data Augmentation
+    - SamplePairing
+        - [2018] Data Augmentation by Pairing Samples for Images Classification
+- PatchShuffle
+    - [2017] PatchShuffle Regularization
+- Random Erasing
+    - [2017] Random Erasing Data Augmentation
+- Shake-Shake
+    - [2017] Shake-Shake regularization
+- SVB, Singular Value Bounding
+    - [2017 CVPR] Improving Training of Deep Neural Networks via Singular Value Bounding
+- Group Normalization
+    - [2018] Group Normalization
+- VISER
+    - [2018] VISER_ Visual Self-Regularization
+- ShakeDrop
+    - [2018] To realize a similar regularization to Shake-Shake on 1-branch network architectures
+- AutoAugment
+    - [2018] AutoAugment: Learning Augmentation Policies from Data
+- Orthogonality Regularizations
+    - [2018] Can We Gain More from Orthogonality Regularizations in Training Deep CNNs
+- DropBlock
+    - [2018 NIPS] DropBlock_ A regularization method for convolutional networks
+- Switchable Normalization
+    - [2018] Differentiable Learning-to-Normalize via Switchable Normalization
+- DropFilter
+    - [2018] DropFilter_ Dropout for Convolutions
+- Others
+    - [2017] L2 Regularization versus Batch and Weight Normalization
+    - [2017] Regularizing neural networks by penalizing confident output distributions
+    - [2017] Dataset Augmentation in Feature Space
+    - [2018] Data augmentation instead of explicit regularization
+    - [2018] Do deep nets really need weight decay and dropout
+    - https://github.com/takmin/DataAugmentation
+    - https://github.com/codebox/image_augmentor
+    
