@@ -16,8 +16,14 @@
 	- ln -s libcudnn.so.6.0.21 libcudnn.so.6
 	- ln -s libcudnn.so.6 libcudnn.so
 
-## 虚拟环境List展示
+# 虚拟环境List展示
 - conda info --envs
+
+# 测试TensorFlow安装是否成功
+- import tensorflow as tf
+- a = tf.constant("Hello World")
+- sess = tf.Session()
+- print(sess.run(a))
 
 [TensorFlow与CUDA、CUDNN版本对应关系](https://blog.csdn.net/omodao1/article/details/83241074)
 
