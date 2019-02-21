@@ -1,7 +1,7 @@
-# TensorFlow安装（联网）
+# TensorFlow安装（联网-虚拟环境）
 - conda create -n tensorflow python=2.7
 - source activate tensorflow
-	- pip install tensorflow-gpu==1.2.0
+	- pip install tensorflow-gpu==1.4.0
 	- pip install --upgrade pip
 - source deactivate
 - conda remove -n tensorflow --all
@@ -15,6 +15,9 @@
 	- chmod u=rwx,g=rx,o=rx libcudnn.so.6.0.21
 	- ln -s libcudnn.so.6.0.21 libcudnn.so.6
 	- ln -s libcudnn.so.6 libcudnn.so
+
+## 虚拟环境List展示
+- conda info --envs
 
 [TensorFlow与CUDA、CUDNN版本对应关系](https://blog.csdn.net/omodao1/article/details/83241074)
 
